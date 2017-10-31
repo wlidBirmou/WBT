@@ -38,7 +38,6 @@ import nrz.fairHandlerStates.files.path.SoftDirectories;
 import nrz.fairHandlerStates.model.FhStatesModel;
 import nrz.fairHandlerStates.model.FhsStatesModel;
 import nrz.fairHandlerStates.model.GeneralSittingsModel;
-import nrz.java.synth.FlatSynthStyleFactory;
 import org.jdom2.JDOMException;
 import org.joda.time.DateTime;
 
@@ -66,8 +65,7 @@ public class FairHandler {
     }
 
     private static void initWatchers() {
-        
-        
+
         try {
             ExecutionDirectoryWatcher executionDirectoryWatcher = new ExecutionDirectoryWatcher();
             Thread executionDirectoryThread = new Thread(executionDirectoryWatcher);
@@ -143,7 +141,7 @@ public class FairHandler {
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(FairHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         try {
             FairHandlerUtility.initializeAllFonts();
         } catch (FontFormatException ex) {
